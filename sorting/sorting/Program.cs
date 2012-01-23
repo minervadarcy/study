@@ -18,6 +18,13 @@ namespace sorting
             // Shell Sort
             //http://www.squidoo.com/sorting-algorithms
 
+            // Test out average
+            int[] testAvgArray = new int[] { 10, 20, 30};
+
+            Average a = new Average();
+            int answer = a.AverageArray(testAvgArray);
+            Console.WriteLine("answer Average is 20 =>{0}", answer.ToString());
+
         }
     }
 }
