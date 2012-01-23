@@ -19,5 +19,32 @@ namespace sorting
             return sortedList;
         }
 
+        public int[] Sort(int[] sortList)
+        {
+            int count = 0;
+            if (sortList != null) count = sortList.Count();
+            int tempSwap = 0;
+            bool isSorted = false;
+
+            while (isSorted)
+            {
+                isSorted = true;
+                for (int i = 0; i < count - 1; i++)
+                {
+
+                    if (sortList[i] > sortList[i + 1])
+                    {
+                        isSorted = false;
+                        tempSwap = sortList[i + 1];
+                        sortList[i + 1] = sortList[i];
+                        sortList[i] = tempSwap;
+                    }
+                }
+            }
+
+
+            return sortList;
+        }
+
     }
 }
